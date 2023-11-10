@@ -35,4 +35,8 @@ export interface Classification {
     id: string;
     name: string;
   };
+  subType: {
+    id: string;
+    name: string;
+  };
 }

@@ -5,6 +5,7 @@ import Details from './Details';
 import BandSocialLinks from './BandSocialLinks';
 import Image from 'next/image';
 import { BandDataProps } from 'types/bandComponent';
+import { SocialLink } from 'types/socialLinks';
 
 const BandComponent = ({ bandData }: BandDataProps) => {
   return (
@@ -35,44 +36,46 @@ const BandComponent = ({ bandData }: BandDataProps) => {
             </div>
 
             <BandSocialLinks
-              socialLinks={[
-                bandData?._embedded?.attractions[0]?.externalLinks?.twitter?.[0]
-                  ?.url && {
-                  url: bandData._embedded.attractions[0].externalLinks
-                    .twitter[0].url,
-                  icon: 'Twitter',
-                },
-                bandData?._embedded?.attractions[0]?.externalLinks
-                  ?.facebook?.[0]?.url && {
-                  url: bandData._embedded.attractions[0].externalLinks
-                    .facebook[0].url,
-                  icon: 'Facebook',
-                },
-                bandData?._embedded?.attractions[0]?.externalLinks
-                  ?.instagram?.[0]?.url && {
-                  url: bandData._embedded.attractions[0].externalLinks
-                    .instagram[0].url,
-                  icon: 'Instagram',
-                },
-                bandData?._embedded?.attractions[0]?.externalLinks?.itunes?.[0]
-                  ?.url && {
-                  url: bandData._embedded.attractions[0].externalLinks.itunes[0]
-                    .url,
-                  icon: 'Link',
-                },
-                bandData?._embedded?.attractions[0]?.externalLinks?.spotify?.[0]
-                  ?.url && {
-                  url: bandData._embedded.attractions[0].externalLinks
-                    .spotify[0].url,
-                  icon: 'SpaceIcon',
-                },
-                bandData?._embedded?.attractions[0]?.externalLinks?.youtube?.[0]
-                  ?.url && {
-                  url: bandData._embedded.attractions[0].externalLinks
-                    .youtube[0].url,
-                  icon: 'Youtube',
-                },
-              ].filter(Boolean)}
+              socialLinks={
+                [
+                  bandData?._embedded?.attractions[0]?.externalLinks
+                    ?.twitter?.[0]?.url && {
+                    url: bandData._embedded.attractions[0].externalLinks
+                      .twitter[0].url,
+                    icon: 'Twitter',
+                  },
+                  bandData?._embedded?.attractions[0]?.externalLinks
+                    ?.facebook?.[0]?.url && {
+                    url: bandData._embedded.attractions[0].externalLinks
+                      .facebook[0].url,
+                    icon: 'Facebook',
+                  },
+                  bandData?._embedded?.attractions[0]?.externalLinks
+                    ?.instagram?.[0]?.url && {
+                    url: bandData._embedded.attractions[0].externalLinks
+                      .instagram[0].url,
+                    icon: 'Instagram',
+                  },
+                  bandData?._embedded?.attractions[0]?.externalLinks
+                    ?.itunes?.[0]?.url && {
+                    url: bandData._embedded.attractions[0].externalLinks
+                      .itunes[0].url,
+                    icon: 'Link',
+                  },
+                  bandData?._embedded?.attractions[0]?.externalLinks
+                    ?.spotify?.[0]?.url && {
+                    url: bandData._embedded.attractions[0].externalLinks
+                      .spotify[0].url,
+                    icon: 'SpaceIcon',
+                  },
+                  bandData?._embedded?.attractions[0]?.externalLinks
+                    ?.youtube?.[0]?.url && {
+                    url: bandData._embedded.attractions[0].externalLinks
+                      .youtube[0].url,
+                    icon: 'Youtube',
+                  },
+                ].filter(Boolean) as SocialLink[]
+              }
             />
           </div>
 

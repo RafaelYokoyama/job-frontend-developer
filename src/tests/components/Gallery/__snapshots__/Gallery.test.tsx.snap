@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gallery Component checks a snapshot 1`] = `
+<div>
+  <div>
+    <div
+      class="mt-4"
+    >
+      <h2
+        class="text-lg font-semibold text-gray-800 mb-2"
+      >
+        Galeria de Imagens 
+        1
+      </h2>
+      <div
+        class="grid grid-cols-8 gap-1"
+      >
+        <img
+          alt="Image 1 of Gallery 1"
+          class="w-[38px]  h-[38px] object-cover rounded-lg"
+          data-nimg="1"
+          decoding="async"
+          height="38"
+          loading="lazy"
+          src="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage1.jpg&w=96&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage1.jpg&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2Fimage1.jpg&w=96&q=75 2x"
+          style="color: transparent;"
+          width="38"
+        />
+        <img
+          alt="Image 2 of Gallery 1"
+          class="w-[38px]  h-[38px] object-cover rounded-lg"
+          data-nimg="1"
+          decoding="async"
+          height="38"
+          loading="lazy"
+          src="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage2.jpg&w=96&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage2.jpg&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2Fimage2.jpg&w=96&q=75 2x"
+          style="color: transparent;"
+          width="38"
+        />
+      </div>
+    </div>
+    <div
+      class="mt-4"
+    >
+      <h2
+        class="text-lg font-semibold text-gray-800 mb-2"
+      >
+        Galeria de Imagens 
+        2
+      </h2>
+      <div
+        class="grid grid-cols-8 gap-1"
+      >
+        <img
+          alt="Image 1 of Gallery 2"
+          class="w-[38px]  h-[38px] object-cover rounded-lg"
+          data-nimg="1"
+          decoding="async"
+          height="38"
+          loading="lazy"
+          src="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage3.jpg&w=96&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage3.jpg&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2Fimage3.jpg&w=96&q=75 2x"
+          style="color: transparent;"
+          width="38"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

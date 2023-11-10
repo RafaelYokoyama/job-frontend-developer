@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge Component renders correctly 1`] = `
+<div>
+  <div>
+    <span
+      class="inline-block mx-1 whitespace-nowrap rounded-[0.27rem] red px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-primary-700"
+    >
+      Badge 1
+    </span>
+    <span
+      class="inline-block mx-1 whitespace-nowrap rounded-[0.27rem] blue px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-primary-700"
+    >
+      Badge 2
+    </span>
+    <span
+      class="inline-block mx-1 whitespace-nowrap rounded-[0.27rem] green px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-primary-700"
+    >
+      Badge 3
+    </span>
+  </div>
+</div>
+`;

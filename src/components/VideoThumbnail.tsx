@@ -6,7 +6,7 @@ import Button from './Button';
 const VideoThumbnail = ({
   video,
   openModal,
-  children
+  children,
 }: VideoThumbnailProps) => {
   const videoId = extractVideoId(video);
 

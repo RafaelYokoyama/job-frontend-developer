@@ -5,7 +5,7 @@ import Modal from 'components/Modal';
 const mockModalProps = {
   modalOpen: true,
   selectedVideo: 'abcd1234',
-  closeModal: jest.fn()
+  closeModal: jest.fn(),
 };
 
 describe('Modal Component', () => {

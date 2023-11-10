@@ -104,8 +104,8 @@ const VideoSearchPage = () => {
                       { name: 'Star', value: video.statistics.favoriteCount },
                       {
                         name: 'MessageSquare',
-                        value: video.statistics.commentCount
-                      }
+                        value: video.statistics.commentCount,
+                      },
                     ]}
                   />
                   <Details

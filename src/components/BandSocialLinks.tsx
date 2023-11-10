@@ -11,6 +11,7 @@ const BandSocialLinks = ({ socialLinks }: BandSocialLinksProps) => {
           className="bg-white inline-flex justify-center items-center text-gray-500 shadow-lg w-8 h-8 rounded-md hover:text-gray-800 hover:shadow-sm"
           href={link.url}
           target="_blank"
+          rel="noreferrer"
         >
           <Icon name={link.icon} />
         </a>

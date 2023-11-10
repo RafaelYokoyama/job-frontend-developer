@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Artista',
-  description: 'Pesquise seu artista favorito'
+  description: 'Pesquise seu artista favorito',
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {

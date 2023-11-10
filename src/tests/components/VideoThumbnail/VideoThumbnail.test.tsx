@@ -6,22 +6,18 @@ import { videoThumbnail } from 'tests/mocks/videoThumbnail';
 describe('VideoThumbnail Component', () => {
   it('renders video thumbnail component', () => {
     render(
-      <VideoThumbnail
-        video={videoThumbnail}
-        openModal={jest.fn()}
-        children={<div>Sample children component</div>}
-      />
+      <VideoThumbnail video={videoThumbnail} openModal={jest.fn()}>
+        <div data-testid="child-component">Sample Child Component</div>
+      </VideoThumbnail>
     );
   });
 
   it('calls openModal function with the correct video ID when Play Video button is clicked', () => {
     const openModal = jest.fn();
     const { getByText } = render(
-      <VideoThumbnail
-        video={videoThumbnail}
-        openModal={openModal}
-        children={<div>Sample children component</div>}
-      />
+      <VideoThumbnail video={videoThumbnail} openModal={openModal}>
+        <div data-testid="child-component">Sample Child Component</div>
+      </VideoThumbnail>
     );
     const playButton = getByText('Play Video');
     fireEvent.click(playButton);
@@ -30,11 +26,9 @@ describe('VideoThumbnail Component', () => {
 
   it('renders the overlay correctly on hover', () => {
     const { container } = render(
-      <VideoThumbnail
-        video={videoThumbnail}
-        openModal={jest.fn()}
-        children={<div>Sample children component</div>}
-      />
+      <VideoThumbnail video={videoThumbnail} openModal={jest.fn()}>
+        <div data-testid="child-component">Sample Child Component</div>
+      </VideoThumbnail>
     );
     const thumbnailContainer = container.firstChild;
     fireEvent.mouseOver(thumbnailContainer);
@@ -44,11 +38,9 @@ describe('VideoThumbnail Component', () => {
 
   it('applies the correct CSS classes to the container', () => {
     const { container } = render(
-      <VideoThumbnail
-        video={videoThumbnail}
-        openModal={jest.fn()}
-        children={<div>Sample children component</div>}
-      />
+      <VideoThumbnail video={videoThumbnail} openModal={jest.fn()}>
+        <div data-testid="child-component">Sample Child Component</div>
+      </VideoThumbnail>
     );
     const thumbnailContainer = container.firstChild;
     expect(thumbnailContainer).toHaveClass(
@@ -72,11 +64,9 @@ describe('VideoThumbnail Component', () => {
   it('validates that the Play Video button is present and clickable', () => {
     const openModal = jest.fn();
     const { getByText } = render(
-      <VideoThumbnail
-        video={videoThumbnail}
-        openModal={openModal}
-        children={<div>Sample children component</div>}
-      />
+      <VideoThumbnail video={videoThumbnail} openModal={openModal}>
+        <div data-testid="child-component">Sample Child Component</div>
+      </VideoThumbnail>
     );
     const playButton = getByText('Play Video');
     expect(playButton).toBeInTheDocument();
@@ -87,11 +77,9 @@ describe('VideoThumbnail Component', () => {
   it('verifies that the video ID is correctly displayed in the open modal function', () => {
     const openModal = jest.fn();
     const { getByText } = render(
-      <VideoThumbnail
-        video={videoThumbnail}
-        openModal={openModal}
-        children={<div>Sample children component</div>}
-      />
+      <VideoThumbnail video={videoThumbnail} openModal={openModal}>
+        <div data-testid="child-component">Sample Child Component</div>
+      </VideoThumbnail>
     );
     const playButton = getByText('Play Video');
     fireEvent.click(playButton);

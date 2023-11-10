@@ -4,7 +4,7 @@ import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { VideoProps } from 'types/video';
 import {
   fetchYoutubeVideoDetails,
-  fetchYoutubeVideos
+  fetchYoutubeVideos,
 } from 'services/youtubeApi';
 import { fetchTicketmasterData } from 'services/ticketmasterApi';
 import { extractVideoId } from 'utils/extractVideoId';
@@ -23,7 +23,7 @@ const DataContext = createContext<DataContextProps>({
   videos: [],
   loading: false,
   error: null,
-  fetchVideos: async () => {}
+  fetchVideos: async () => {},
 });
 
 export const useDataContext = () => {
@@ -67,7 +67,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
           return {
             id: video.id.videoId,
             snippet: video.snippet,
-            statistics: detailsResponse.data.items[index].statistics
+            statistics: detailsResponse.data.items[index].statistics,
           };
         }
       );
@@ -86,7 +86,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
     videos,
     loading,
     error,
-    fetchVideos
+    fetchVideos,
   };
 
   return <DataContext.Provider value={values}>{children}</DataContext.Provider>;

@@ -1,4 +1,4 @@
-import { IconName } from "./Icon";
+import { IconName } from './Icon';
 
 export interface SocialLink {
   url: string;

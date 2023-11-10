@@ -36,22 +36,43 @@ const BandComponent = ({ bandData }: BandDataProps) => {
 
             <BandSocialLinks
               socialLinks={[
-                {
-                  url: bandData?._embedded?.attractions[0]?.externalLinks
-                    ?.twitter?.[0]?.url,
-                  icon: 'Twitter'
+                bandData?._embedded?.attractions[0]?.externalLinks?.twitter?.[0]
+                  ?.url && {
+                  url: bandData._embedded.attractions[0].externalLinks
+                    .twitter[0].url,
+                  icon: 'Twitter',
                 },
-                {
-                  url: bandData?._embedded?.attractions[0]?.externalLinks
-                    ?.facebook?.[0]?.url,
-                  icon: 'Facebook'
+                bandData?._embedded?.attractions[0]?.externalLinks
+                  ?.facebook?.[0]?.url && {
+                  url: bandData._embedded.attractions[0].externalLinks
+                    .facebook[0].url,
+                  icon: 'Facebook',
                 },
-                {
-                  url: bandData?._embedded?.attractions[0]?.externalLinks
-                    ?.instagram?.[0]?.url,
-                  icon: 'Instagram'
-                }
-              ]}
+                bandData?._embedded?.attractions[0]?.externalLinks
+                  ?.instagram?.[0]?.url && {
+                  url: bandData._embedded.attractions[0].externalLinks
+                    .instagram[0].url,
+                  icon: 'Instagram',
+                },
+                bandData?._embedded?.attractions[0]?.externalLinks?.itunes?.[0]
+                  ?.url && {
+                  url: bandData._embedded.attractions[0].externalLinks.itunes[0]
+                    .url,
+                  icon: 'Link',
+                },
+                bandData?._embedded?.attractions[0]?.externalLinks?.spotify?.[0]
+                  ?.url && {
+                  url: bandData._embedded.attractions[0].externalLinks
+                    .spotify[0].url,
+                  icon: 'SpaceIcon',
+                },
+                bandData?._embedded?.attractions[0]?.externalLinks?.youtube?.[0]
+                  ?.url && {
+                  url: bandData._embedded.attractions[0].externalLinks
+                    .youtube[0].url,
+                  icon: 'Youtube',
+                },
+              ].filter(Boolean)}
             />
           </div>
 
@@ -64,36 +85,34 @@ const BandComponent = ({ bandData }: BandDataProps) => {
           <Gallery attractions={bandData._embedded.attractions} />
         </div>
 
-        {bandData._embedded.attractions.map(
-          (attraction: any, attractionIndex: any) => (
-            <div key={attractionIndex} className="my-4 ">
-              {attraction.classifications && attraction.classifications && (
-                <div className="flex flex-wrap border-b gap-2 items-center justify-center py-1">
-                  <Badge
-                    data={[
-                      {
-                        text: attraction.classifications[0]?.genre?.name,
-                        color: 'bg-slate-600'
-                      },
-                      {
-                        text: attraction.classifications[0]?.segment.name,
-                        color: 'bg-green-400'
-                      },
-                      {
-                        text: attraction.classifications[0]?.subGenre?.name,
-                        color: 'bg-red-500'
-                      },
-                      {
-                        text: attraction.classifications[0]?.subType?.name,
-                        color: 'bg-yellow-400'
-                      }
-                    ]}
-                  />
-                </div>
-              )}
-            </div>
-          )
-        )}
+        {bandData._embedded.attractions.map((attraction, attractionIndex) => (
+          <div key={attractionIndex} className="my-4 ">
+            {attraction.classifications && attraction.classifications && (
+              <div className="flex flex-wrap border-b gap-2 items-center justify-center py-1">
+                <Badge
+                  data={[
+                    {
+                      text: attraction.classifications[0]?.genre?.name,
+                      color: 'bg-slate-600',
+                    },
+                    {
+                      text: attraction.classifications[0]?.segment.name,
+                      color: 'bg-green-400',
+                    },
+                    {
+                      text: attraction.classifications[0]?.subGenre?.name,
+                      color: 'bg-red-500',
+                    },
+                    {
+                      text: attraction?.classifications[0]?.subType?.name,
+                      color: 'bg-yellow-400',
+                    },
+                  ]}
+                />
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );

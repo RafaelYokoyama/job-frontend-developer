@@ -16,7 +16,7 @@ describe('Icon', () => {
     const customProps: IconProps = {
       color: 'red',
       size: 24,
-      className: 'custom-icon'
+      className: 'custom-icon',
     };
     const { container } = render(<Icon name={iconName} {...customProps} />);
     expect(container.firstChild).toMatchSnapshot();

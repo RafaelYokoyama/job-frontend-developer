@@ -4,7 +4,7 @@ import { LoadingProps } from 'types/loading';
 
 const LoadingState = ({
   message = 'Carregando...',
-  isLoading = true
+  isLoading = true,
 }: LoadingProps) => {
   return isLoading ? (
     <div className={'container-loading'}>

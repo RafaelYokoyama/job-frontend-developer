@@ -7,7 +7,7 @@ const Icon = ({
   color,
   size = 16,
   className,
-  style
+  style,
 }: { name: IconName } & IconProps) => {
   const LucideIcon = lucideIcons[name] as ComponentType<IconProps>;
 

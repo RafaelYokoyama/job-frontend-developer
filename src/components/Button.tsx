@@ -6,7 +6,7 @@ const Button = ({
   className,
   disabled = false,
   loading = false,
-  text
+  text,
 }: ButtonProps) => {
   return (
     <button

@@ -6,7 +6,7 @@ const Modal = ({
   modalOpen,
   selectedVideo,
   closeModal,
-  children
+  children,
 }: ModalProps) => {
   if (!modalOpen) return null;
 

@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 export type ThumbnailsProps = {
   medium: {
@@ -19,20 +19,20 @@ export type VideoIdProps = {
   videoId: string;
 };
 
-export interface SnippetProps  {
+export interface SnippetProps {
   title: string;
   thumbnails: ThumbnailsProps;
   description: string;
-};
+}
 
-export interface VideoProps  {
-  id: VideoIdProps  ;
+export interface VideoProps {
+  id: VideoIdProps;
   snippet: SnippetProps;
   statistics: StatisticsProps;
-};
+}
 
-export interface VideoThumbnailProps  {
+export interface VideoThumbnailProps {
   video: VideoProps;
-  openModal: (videoId: string) => void
+  openModal: (videoId: string) => void;
   children: ReactNode;
-};
+}

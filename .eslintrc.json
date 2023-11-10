@@ -13,7 +13,6 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
     "prettier"
   ],
   "parser": "@typescript-eslint/parser",
@@ -25,12 +24,13 @@
     "@typescript-eslint",
     "react",
     "react-hooks",
-    "eslint-plugin-import-helpers"
+    "eslint-plugin-import-helpers",
+    "prettier" // Adicione esta linha
   ],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off",
-    "prettier/prettier": ["error", { "singleQuote": false }]
+    "prettier/prettier": "error" // Adicione esta linha
   }
 }

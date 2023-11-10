@@ -1,64 +1,221 @@
-# Dolado: Teste prático para Frontend
+<h1 align="center"> Pesquisar Músicos</h1>
 
-Este é o teste usado por nós aqui da [Dolado](http://www.dolado.com.br) para avaliar tecnicamente os candidatos a nossas vagas de Frontend. Se você estiver participando de um processo seletivo para nossa equipe, certamente em algum momento receberá este link, mas caso você tenha chego aqui "por acaso", sinta-se convidado a desenvolver nosso teste e enviar uma mensagem para nós no e-mail `tech@dolado.com.br`. 
+<img src="https://github.com/RafaelYokoyama/job-frontend-developer/blob/master/.github/gifs/GIF-WEB.gif" alt="Image description">
 
-Aqui na Dolado nós aplicamos este mesmo teste para as vagas em todos os níveis, ou seja, um candidato a uma vaga de frontend júnior fará o mesmo teste de um outro candidato a uma vaga de frontend sênior, mudando obviamente o nosso critério de avaliação do resultado do teste. 
+> 🔎 Website para pesquisar por pessoas no youtube
 
-Nós fazemos isso esperando que as pessoas mais iniciantes entendam qual o modelo de profissional que temos por aqui e que buscamos para o nosso time. Portanto, se você estiver se candidatando a uma vaga mais iniciante, não se assuste, e faça o melhor que você puder!
 
-## Instruções
+## :page_facing_up: Desafio Técnico: Aplicação de Busca de Bandas e Artistas
 
-Você deverá criar um `fork` deste projeto, e desenvolver em cima do seu fork. Use o *README* principal do seu repositório para nos contar como foi resolver seu teste, as decisões tomadas, como você organizou e separou seu código, e principalmente as instruções de como rodar seu projeto, afinal a primeira pessoa que irá rodar seu projeto será um programador backend de nossa equipe, e se você conseguir explicar para ele como fazer isso, você já começou bem!
+**Visão Geral**:
+Este desafio tem como objetivo avaliar suas habilidades técnicas na construção de uma aplicação frontend para busca de bandas e artistas, utilizando as APIs do Youtube e TicketMaster.
 
-Lembre-se que este é um teste técnico e não um concurso público, portanto, não existe apenas uma resposta correta. Mostre que você é bom e nos impressione, mas não esqueça do objetivo do projeto. 
+**Requisitos Funcionais**:
 
-Nós não definimos um tempo limite para resolução deste teste, o que vale para nós e o resultado final e a evolução da criação do projeto até se atingir este resultado, mas acreditamos que este desafio pode ser resolvido em cerca de 16 horas de codificação.
+**Campo de Busca**:
 
-## O desafio
+- Implemente uma tela com um campo de busca centralizado.
 
-Você irá construir a nossa próxima aplicação de busca de bandas e artistas usando as [APIs do Youtube](https://developers.google.com/youtube/v3/getting-started) e [TicketMaster](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/). É uma aplicação simples, onde iremos buscar por um determinado artista ou banda para termos acesso aos vídeos do Youtube retornados pela busca e também os dados desta banda requisitados através da API do Ticketmaster.
+- Ao inserir o nome da banda ou artista e acionar a pesquisa, a aplicação deve submeter a consulta para a API do Youtube.
 
-Nossa ideia de interface, é uma tela com apenas um campo de busca no centro da tela, que ao ser acionado com o nome da banda, irá submeter esta pesquisa para a API do Youtube, retornando uma listagem com alguns vídeos desta banda. Com o submit do formulário, o campo deve se posicionar no topo da tela, para que o espaço todo do miolo da página seja melhor aproveitado.
+**Listagem de Vídeos:**
 
-Para cada um dos vídeos, gostaríamos de ver pelo menos os dados básicos, como titulo, descrição e thumbnail (obviamentem quanto mais informações você mostrar melhor, como rating, usuário que enviou, etc). Quando clicarmos no vídeo, queremos reproduzir o vídeo (embedado ali, em um modal, ou até em um simples link, faça como quiser).
+- Após a pesquisa, a aplicação deve exibir uma lista de vídeos relacionados à banda ou artista.
 
-Além da listagem de vídeos, também gostaríamos de mostrar algumas informações sobre a banda, como os dados de contato em redes sociais, imagens, e o que mais você conseguir extarir da API do TicketMaster. Uma dica é utilizar o recurso de `Attraction Search` da `Discovery API` do TicketMaster para retornar estas informações.
+- Cada item da lista deve apresentar informações básicas, como título, descrição e thumbnail do vídeo. Quanto mais detalhes, melhor.
 
-Você pode gerar suas próprias API Keys para consumir as APIs, mas se quiser usar as nossas, seguem abaixo:
+- Ao clicar em um vídeo, a aplicação deve permitir a reprodução do vídeo, seja incorporando-o em um modal ou através de um simples link.
 
-* Youtube: `AIzaSyCKkUjL9N-LNCWlFiWxSgV2W7oZqf33Nlc`
-* TicketMaster: `x9TAS10ua31T7nONj8geuWe7Cnp7OixA`
+**Posicionamento do Campo de Busca**:
 
-### O que nós esperamos do seu teste
+- Após o submit do formulário, o campo de busca deve ser reposicionado no topo da tela para otimizar o espaço no centro da página.
 
-* Ver na solução a utilização do framework [React](https://react.dev/)
-* Utilizar também o framework [NextJS](https://nextjs.org/)
-* Também ver a utilização de dependency managers (npm, webpack)
-* Mobile first e layout responsivo
+**Informações da Banda:**
 
-### O que nós ficaríamos felizes de ver em seu teste
+- Além da lista de vídeos, a aplicação deve exibir informações sobre a banda ou artista.
+- Utilize a **API do TicketMaster**, especialmente o recurso de **Attraction Search da Discovery API**, para obter dados de contato em redes sociais, imagens e outras informações relevantes
 
-* Testes unitários
-* Gerenciamento de estado (Redux/Recoil/React Query/etc)
-* Utilizar algum framework de componenct (ex. Styled-components, Tailwind, Chakra, etc)
+## 📁 Pages
 
-### O que nos impressionaria
+O site possui uma página, que é:
 
-* Testes de aceitação
-* [BEM naming convention](http://getbem.com/naming/)
-* Ver o código rodando live (Bucket estático S3, Heroku, Firebase Hosting, etc)
+- **Home:** A página principal é a única do projeto e apresenta algumas informações, como: um campo de busca que localiza que os artistas e lista suas infomações com video .
 
-### O que nós não gostaríamos
+## 🎯 Steps
 
-* Descobrir que não foi você quem fez seu teste
-* Ver commits grandes, sem muita explicação nas mensagens em seu repositório 
-* Encontrar um um commit com as dependências de NPM
+**Configuração Inicial**:
 
-## O que avaliaremos de seu teste
+- Inicializei o projeto utilizando Next.js, TypeScript e Tailwind CSS para uma base sólida e eficiente.
+- Configurei o projeto com jest, editor config, prettier, eslint, axios
 
-* Histórico de commits do git
-* As instruções de como rodar o projeto
-* Organização, semântica, estrutura, legibilidade, manutenibilidade do seu código
-* Alcance dos objetivos propostos
-* Adaptação mobile (layout responsivo)
-* Componentização e extensibilidade dos componentes Javascript
+- Adicionei a biblioteca de ícones para uma experiência visual enriquecida.
+
+**Estrutura :**
+
+- Criei uma estrutura organizada para facilitar a manutenção e escalabilidade do projeto.
+Dividi as pastas principais em **.github ,animations, api, app, components, context, services, tests, types, e utils**.
+
+**.github:**
+
+- Incluí a pasta .github para armazenar recursos relacionados à documentação, como prints e informações adicionais sobre o funcionamento do projeto.
+  **animations:**
+
+Esta pasta concentra todas as animações do projeto, proporcionando uma organização centralizada e fácil de manter.
+
+**services:**
+
+- Aqui, agrupei todas as partes relacionadas à integração com a API.
+- Criação de baseUrls
+- Organizei os serviços de acordo com os endpoints ou funcionalidades para manutenção eficiente.
+
+**tests**:
+
+- Implementei os testes utilizando Jest, mantendo-os em uma estrutura clara e intuitiva.
+- A pasta mocks contém mocks específicos para facilitar a simulação de dados no ambiente de teste.
+
+**types:**
+
+- Centralizei todas as definições de tipos neste diretório, promovendo uma consistência nas interfaces utilizadas em todo o projeto.
+
+**context:**
+
+- Utilizei a Context API do React para gerenciar o estado global da aplicação.
+- Essa pasta se torna o hub central para o compartilhamento de dados entre componentes.
+
+**utils:**
+
+- Armazenei funções utilitárias e helpers neste diretório para manter o código limpo e modular.
+  As funções aqui são reutilizáveis em diferentes partes do projeto.
+
+**app:**
+
+- Essa pasta contém o núcleo da aplicação Next.js.
+
+**Desenvolvimento das APIs:**
+
+- No diretório services, criei módulos para interação com as APIs.
+- Para a YouTube API, estabeleci a base URL e funções como fetchYoutubeVideos e fetchYoutubeVideoDetails.
+- Similarmente, para a Ticketmaster API, configurei a base URL e desenvolvi a função fetchTicketmasterData.
+
+**Implementação Inicial:**
+
+- Na raiz do projeto, construí uma página inicial com um input simples para busca, utilizei primeiro as api do youtube para buscar e trazer os detalhes,depois a api da Ticketmaster para trazer o resto das informações.
+- Organizei as operações iniciais e a estrutura funcional.
+
+**Refatoração e Organização:**
+
+- Refatorei o código inicial, dividindo-o em componentes em um diretório components.
+- Simplifiquei funções
+
+**Introdução do Contexto:**
+
+- Criei um contexto em context para gerenciar o estado global da aplicação, facilitando o compartilhamento de dado
+
+**Estilização Responsiva:**
+
+Utilizando Tailwind CSS, comecei a estilização pelo design responsivo, depois fui para a web ajsutando conforme necessário.
+
+**Aprimoramentos Adicionais:**
+
+- Adicionei recursos como um componente de loading para indicar carregamento de dados.
+- Implementei mensagens de erro específicas, como para excesso de requisições à API do YouTube ou quando nenhum usuário é encontrado.
+
+**Adição de Testes:**
+
+- Implementei testes usando Jest , incluindo mocks para simular dados durante os testes.
+
+## 📁 Screen
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="https://github.com/RafaelYokoyama/job-frontend-developer/raw/master/.github/screens/Screenshot_1.png" alt="Imagem 1" width="300"/>
+    <img src="https://github.com/RafaelYokoyama/job-frontend-developer/raw/master/.github/screens/Screenshot_2.png" alt="Imagem 2" width="300"/>
+    <img src="https://github.com/RafaelYokoyama/job-frontend-developer/raw/master/.github/screens/Screenshot_3.png" alt="Imagem 3" width="200"/>
+    <img src="https://github.com/RafaelYokoyama/job-frontend-developer/raw/master/.github/screens/Screenshot_4.png" alt="Imagem 4" width="250"/>
+    <img src="https://github.com/RafaelYokoyama/job-frontend-developer/raw/master/.github/screens/Screenshot_5.png" alt="Imagem 5" width="300"/>
+</div>
+
+## 📁 Gifs
+<div style="display: flex; justify-content: space-between;">
+   <img src="https://github.com/RafaelYokoyama/job-frontend-developer/blob/master/.github/gifs/GIF-MOBILE.gif" alt="Imagem 1" width="200"/>
+    <img src="https://github.com/RafaelYokoyama/job-frontend-developer/blob/master/.github/gifs/GIF-WEB.gif" alt="Imagem 2" width="800"
+</div>
+
+## 🚀 Tecnologiaas
+
+- [Nextjs](https://nextjs.org/)
+- [Axios](https://axios-http.com/docs/intro)
+- [lucide Icon](https://lucide.dev/icons/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Jest](https://jestjs.io/pt-BR/docs/getting-started)
+- [Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+
+## :white_check_mark: Requerimento
+
+Antes de iniciar :checkered_flag:, você precisa ter o [Git](https://git-scm.com) e o [Node](https://nodejs.org/en/) instalados.
+
+## :checkered_flag: Starting
+
+```bash
+#  Clone este projeto
+$ git clone https://github.com/RafaelYokoyama/job-frontend-developer.git
+# Acessar
+$ cd job-frontend-developer
+# Instalar dependências
+$ yarn
+# Execute o projeto
+$ yarn dev
+# O servidor será inicializado em <http://localhost:3000>
+```
+
+## Configuração das Chaves de API
+
+Para que este projeto funcione corretamente, você precisará obter chaves de API para as APIs do YouTube e do Ticketmaster. Siga as instruções abaixo para gerar e configurar suas chaves:
+
+### 1. Chave de API do YouTube
+
+Para obter uma chave de API do YouTube, siga os passos abaixo:
+
+1. Acesse [Google Cloud Console](https://console.cloud.google.com/).
+2. Crie um novo projeto ou selecione um projeto existente.
+3. No painel de navegação à esquerda, clique em "API e Serviços" e depois em "Credenciais".
+4. Clique em "Criar credenciais" e escolha "Chave de API".
+5. Copie a chave gerada.
+
+Agora, abra o arquivo `.env.local` na raiz do projeto e adicione a seguinte linha:
+
+```env
+NEXT_PUBLIC_YOUTUBE_API_KEY=SuaChaveDoYouTubeAqui
+```
+
+### 2. Chave de API do Ticketmaster
+
+Para obter uma chave de API do Ticketmaster, siga os passos abaixo:
+
+1. Acesse [Ticketmaster](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/).
+2. Crie uma conta ou faça login.
+3. Crie um novo aplicativo para obter sua chave de API.
+4. Copie a chave gerada.
+
+Agora, abra o arquivo `.env.local` na raiz do projeto e adicione a seguinte linha:
+
+```env
+NEXT_PUBLIC_TICKETMASTER_API_KEY=SuaChaveDoTicketmasterAqui
+```
+
+
+
+## 🤝 Colaborador
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/60978293?s=400&u=ac4be92aaa9bd68b77f92a473400213582d3e032&v=4 " width="100px;" alt="Photo do Rafael"/><br>
+        <sub>
+          <b>Rafael Yokoyama </b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>

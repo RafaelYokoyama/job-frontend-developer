@@ -6,6 +6,7 @@ const Button = ({
   className,
   disabled = false,
   loading = false,
+  dataCy,
   text,
 }: ButtonProps) => {
   return (
@@ -16,6 +17,7 @@ const Button = ({
         loading ? 'cursor-not-allowed opacity-50' : ''
       } ${className}`}
       disabled={disabled || loading}
+      data-cy={dataCy}
     >
       {loading ? (
         <div className="flex items-center">

@@ -7,4 +7,5 @@ export interface ButtonProps {
   disabled?: boolean;
   loading?: boolean;
   text?: ReactNode;
+  dataCy?: string;
 }

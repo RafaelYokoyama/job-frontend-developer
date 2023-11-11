@@ -12,12 +12,12 @@ const VideoThumbnail = ({
 
   return (
     <div
-      data-cy={`video-thumbnail-${videoId}`}
       key={videoId}
       className="max-w-sm rounded overflow-hidden shadow-lg m-4 transform transition duration-500 hover:scale-105"
     >
       <div className="relative group">
         <Image
+          data-cy={`image-video-${videoId}`}
           width={550}
           height={550}
           className="w-full"
@@ -26,6 +26,7 @@ const VideoThumbnail = ({
         />
         <div className="overlay hidden group-hover:flex items-center justify-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 text-white text-xl font-bold">
           <Button
+            dataCy={`video-thumbnail-${videoId}`}
             onClick={() => {
               openModal(videoId);
             }}

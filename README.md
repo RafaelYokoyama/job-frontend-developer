@@ -122,9 +122,9 @@ Utilizando Tailwind CSS, comecei a estilização pelo design responsivo, depois 
 
 **Adição de Testes:**
 
-- Implementei testes usando Jest , incluindo mocks para simular dados durante os testes.
+- Implementei testes usando Jest e Cypress , incluindo mocks para simular dados durante os testes.
 
-## 📁 Screen
+## 📁 Screens
 
 <div style="display: flex; justify-content: space-between;">
     <img src="https://github.com/RafaelYokoyama/job-frontend-developer/raw/master/.github/screens/Screenshot_1.png" alt="Imagem 1" width="300"/>
@@ -149,12 +149,21 @@ Utilizando Tailwind CSS, comecei a estilização pelo design responsivo, depois 
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Jest](https://jestjs.io/pt-BR/docs/getting-started)
 - [Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Cypress](https://www.cypress.io/)
+
+### Links
+
+| Ambiente     |  URL                             |
+| ---          |  ---                             |
+| Local        |  http://localhost:3000         |                 |
+| Producão     |  https://search-people-music.netlify.app/|
+
 
 ## :white_check_mark: Requerimento
 
 Antes de iniciar :checkered_flag:, você precisa ter o [Git](https://git-scm.com) e o [Node](https://nodejs.org/en/) instalados.
 
-## :checkered_flag: Starting
+## :checkered_flag: Iniciar
 
 ```bash
 #  Clone este projeto
@@ -166,6 +175,18 @@ $ yarn
 # Execute o projeto
 $ yarn dev
 # O servidor será inicializado em <http://localhost:3000>
+```
+
+### Rodando Testes
+
+```bash
+
+Unit testing:
+yarn run test
+
+End to end :
+yarn run cypress open
+
 ```
 
 ## Configuração das Chaves de API

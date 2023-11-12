@@ -34,7 +34,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
   const [bandData, setBandData] = useState<BandDataProps | null>(null);
   const [videos, setVideos] = useState<VideoProps[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null); // Novo estado para mensagem de erro
+  const [error, setError] = useState<string | null>(null);
 
   const fetchVideos = async (searchQuery: string): Promise<void> => {
     try {
@@ -76,7 +76,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      setError('Erro ao buscar video. Por favor, tente novamente mais tarde.'); // Define a mensagem de erro
+      setError('Erro ao buscar video. Por favor, tente novamente mais tarde.');
       console.error('Erro ao buscar dados:', error);
     }
   };

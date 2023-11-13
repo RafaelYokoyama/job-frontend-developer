@@ -39,7 +39,7 @@ Este desafio tem como objetivo avaliar suas habilidades técnicas na construçã
 
 O site possui uma página, que é:
 
-- **Home:** A página principal é a única do projeto e apresenta algumas informações, como: um campo de busca que localiza que os artistas e lista suas infomações com video .
+- **Home:** A página principal é a única do projeto e apresenta algumas informações, como: um campo de busca que localiza os artistas e lista suas infomações com video .
 
 ## 🎯 Steps
 
@@ -70,7 +70,7 @@ Esta pasta concentra todas as animações do projeto, proporcionando uma organiz
 
 **tests**:
 
-- Implementei os testes utilizando Jest, mantendo-os em uma estrutura clara e intuitiva.
+- Implementei os testes utilizando Jest e Cypress, mantendo-os em uma estrutura clara e intuitiva.
 - A pasta mocks contém mocks específicos para facilitar a simulação de dados no ambiente de teste.
 
 **types:**
@@ -137,7 +137,7 @@ Utilizando Tailwind CSS, comecei a estilização pelo design responsivo, depois 
 ## 📁 Gifs
 <div style="display: flex; justify-content: space-between;">
    <img src="https://github.com/RafaelYokoyama/job-frontend-developer/blob/master/.github/gifs/GIF-MOBILE.gif" alt="Imagem 1" width="200"/>
-    <img src="https://github.com/RafaelYokoyama/job-frontend-developer/blob/master/.github/gifs/GIF-WEB.gif" alt="Imagem 2" width="800"
+    <img src="https://github.com/RafaelYokoyama/job-frontend-developer/blob/master/.github/gifs/GIF-WEB.gif" alt="Imagem 2" width="600"
 </div>
 
 ## 🚀 Tecnologiaas
@@ -184,7 +184,7 @@ $ yarn dev
 Unit testing:
 yarn run test
 
-End to end :
+End to end:
 yarn run cypress open
 
 ```

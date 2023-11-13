@@ -11,7 +11,7 @@ const SearchBar = ({
   return (
     <div className="mx-auto">
       <div className="relative text-center sm:shadow-sm dark:bg-transparent">
-        <form onSubmit={handleFormSubmit} action="/search">
+        <form onSubmit={handleFormSubmit}>
           <label
             className="mx-auto mt-8 relative min-w-sm max-w-2xl flex flex-col md:flex-row items-center justify-center border py-2 px-2 rounded-2xl gap-2 shadow-2xl focus-within:border-gray-300"
             htmlFor="search-bar"
